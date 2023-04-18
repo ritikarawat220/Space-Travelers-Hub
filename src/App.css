@@ -28,29 +28,28 @@
   list-style-type: none;
 }
 
-.links > li > a,
-.links {
+.links > li > a {
   color: #0290ff;
   list-style: none;
   text-decoration: none;
 }
 
-.line {
-  width: 2px;
+.links > li:nth-child(2)::after {
+  content: '|';
+  float: right;
+  width: 1px;
   height: 20px;
-  background-color: gray;
+  margin-left: 10px;
 }
 
 .links li a:hover,
-.links:hover,
-.links li a.active,
-.links.active {
-  color: red;
+.links li a.active {
+  color: #0290ff;
+  text-decoration: underline;
 }
 
 .hr {
   border: 0.1px solid lightgray;
-  margin-top: -0.01%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

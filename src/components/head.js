@@ -11,8 +11,6 @@ export default function Header() {
         </div>
         <div className="flex">
           <Navbar />
-          <div className="line" />
-          <a href=" " className="links">My Profile</a>
         </div>
       </div>
       <hr className="hr" />
