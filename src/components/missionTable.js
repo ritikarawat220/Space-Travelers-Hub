@@ -7,15 +7,15 @@ function MissionTable() {
   const missions = useSelector(selectMissions);
 
   const renderRows = () => missions.map((mission) => (
-    <tr key={mission.mission_id}>
-      <td>{mission.mission_name}</td>
+    <tr className="main" key={mission.mission_id}>
+      <td className="name">{mission.mission_name}</td>
       <td>
-        <p>{mission.description}</p>
+        <p className="description">{mission.description}</p>
       </td>
-      <td>
+      <td className="mission-btn">
         <MissionLabel isReserved={!!mission.reserved} />
       </td>
-      <td>
+      <td className="mission-btn">
         <MissionLabel isReserved={!!mission.reserved} />
       </td>
     </tr>
