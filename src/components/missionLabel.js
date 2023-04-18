@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import './missionLabel.css';
 
 function MissionLabel({ isReserved }) {
   return (
-    <div>
+    <div className="label">
       <div
         style={{ backgroundColor: isReserved ? '#18a2b8' : '#6d757d' }}
       >
