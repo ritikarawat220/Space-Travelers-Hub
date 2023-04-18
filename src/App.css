@@ -7,6 +7,52 @@
   pointer-events: none;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header {
+  list-style: none;
+  padding: 0 2rem;
+}
+
+.headerimg {
+  width: 60px;
+  height: 60px;
+}
+
+.links > li {
+  list-style-type: none;
+}
+
+.links > li > a,
+.links {
+  color: #0290ff;
+  list-style: none;
+  text-decoration: none;
+}
+
+.line {
+  width: 2px;
+  height: 20px;
+  background-color: gray;
+}
+
+.links li a:hover,
+.links:hover,
+.links li a.active,
+.links.active {
+  color: red;
+}
+
+.hr {
+  border: 0.1px solid lightgray;
+  margin-top: -0.01%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
