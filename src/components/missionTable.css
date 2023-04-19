@@ -1,0 +1,60 @@
+.rows thead,
+.main {
+  background-color: #fff;
+}
+
+.main:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.name {
+  vertical-align: top;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.description {
+  font-size: 14px;
+  color: #3b3e42;
+  margin-bottom: 12px;
+}
+
+.mission-btn {
+  width: auto;
+  text-align: center;
+}
+
+.rows {
+  width: 100%;
+  text-align: start;
+  border-collapse: collapse;
+  margin: 10px 0 20px;
+}
+
+.rows th,
+.rows td {
+  padding: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.rows th {
+  text-align: center;
+}
+
+.rows tr {
+  padding: 160px;
+}
+
+.first,
+.fourth {
+  width: 160px;
+}
+
+.third {
+  width: 130px;
+}
+
+.second {
+  width: auto;
+  text-align: start;
+}

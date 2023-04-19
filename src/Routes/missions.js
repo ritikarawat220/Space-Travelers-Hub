@@ -1,9 +1,12 @@
 import React from 'react';
+import MissionTable from '../components/missionTable';
 
-export default function Missions() {
+function Missions() {
   return (
-    <>
-      <h2>mission</h2>
-    </>
+    <main>
+      <MissionTable />
+    </main>
   );
 }
+
+export default Missions;
