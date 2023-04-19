@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectMissions } from '../redux/mission/missionSlice';
 import MissionLabel from './missionLabel';
+import './missionTable.css';
 
 function MissionTable() {
   const missions = useSelector(selectMissions);

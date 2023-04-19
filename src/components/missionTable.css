@@ -38,7 +38,7 @@
 }
 
 .rows th {
-  text-align: start;
+  text-align: center;
 }
 
 .rows tr {
@@ -58,4 +58,3 @@
   width: auto;
   text-align: start;
 }
-
