@@ -1,9 +1,10 @@
 import React from 'react';
+import MyproFile from '../components/myprofile';
 
 export default function Myprofile() {
   return (
     <>
-      <h2>my profile</h2>
+      <MyproFile />
     </>
   );
 }

@@ -116,6 +116,28 @@
   background-color: #3ea4f1;
 }
 
+.myprofile_container {
+  justify-content: space-around;
+  display: flex;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+
+.myprofile_container > div {
+  width: 50%;
+}
+
+.rockettable {
+  width: 100%;
+}
+
+.rocketbody > tr > td {
+  border: 2px solid rgb(234, 231, 231);
+  color: rgb(64, 62, 62);
+  padding: 15px 10px 15px 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
