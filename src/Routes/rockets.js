@@ -1,9 +1,10 @@
 import React from 'react';
+import Rocket from '../components/rocket';
 
 export default function Rockets() {
   return (
     <div>
-      <h4>rocket</h4>
+      <Rocket />
     </div>
   );
 }

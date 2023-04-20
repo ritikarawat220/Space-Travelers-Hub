@@ -52,6 +52,70 @@
   border: 0.1px solid lightgray;
 }
 
+.main {
+  background-color: white !important;
+}
+
+.main > div {
+  margin-top: 15px;
+}
+
+.Rocket_container {
+  padding: 0 2.5rem;
+}
+
+.Rocket_container > div {
+  height: 250px;
+  text-align: left;
+}
+
+.rocket_img > img {
+  width: 250px;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  background-color: #26a69a;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-right: 6px;
+  padding: 0.1rem;
+}
+
+.rocket_head {
+  margin-top: -0.9%;
+  color: #383e4a;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.rocket_text {
+  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(62, 62, 62);
+}
+
+.cancel-btn,
+.reserve-Btn {
+  background-color: #0290ff;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel-btn:hover,
+.reserve-Btn:hover {
+  background-color: #3ea4f1;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
