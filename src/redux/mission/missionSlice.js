@@ -15,7 +15,7 @@ const missionsSlice = createSlice({
     isFetching: false,
   },
   reducers: {
-    updateMission: (state, action) => ({
+    missionUpdated: (state, action) => ({
       ...state,
       list: state.list.map((mission) => {
         if (mission.mission_id === action.payload) {
