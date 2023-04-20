@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/missionLabel.module.css';
+import styles from '../styles/MissionsBadge.module.css';
 
-function MissionLabel({ isReserved }) {
+function MissionsBadge({ isReserved }) {
   return (
     <div
       className={styles.label}
@@ -13,8 +13,8 @@ function MissionLabel({ isReserved }) {
   );
 }
 
-MissionLabel.propTypes = {
+MissionsBadge.propTypes = {
   isReserved: PropTypes.bool.isRequired,
 };
 
-export default MissionLabel;
+export default MissionsBadge;
