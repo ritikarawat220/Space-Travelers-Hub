@@ -61,12 +61,13 @@
 }
 
 .Rocket_container {
-  padding: 0 2.5rem;
+  padding: 0 3.5rem;
 }
 
 .Rocket_container > div {
   height: 250px;
   text-align: left;
+  margin-left: 1rem;
 }
 
 .rocket_img > img {

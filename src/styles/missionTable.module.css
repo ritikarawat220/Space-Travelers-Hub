@@ -25,7 +25,7 @@
 }
 
 .rows {
-  text-align: start;
+  text-align: justify;
   border-collapse: collapse;
   margin: 10px 0 20px;
 }
