@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
@@ -70,5 +71,31 @@ describe('RocketList component', () => {
       expect(screen.getByText('Falcon 9')).toBeInTheDocument();
       expect(screen.getByText('Falcon Heavy')).toBeInTheDocument();
     });
+  });
+
+  const store = mockStore({
+    rockets: {
+      rockets: [],
+      status: 'idle',
+      error: null,
+    },
+  });
+  const rocket = {
+    id: 'falcon1',
+    name: 'Falcon 1',
+    description: 'Small launch vehicle',
+    flickr_images: ['https://www.example.com/falcon1.jpg'],
+    reserved: true,
+  };
+
+  it('renders correctly when rocket is reserved', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <Rocket rocket={rocket} handleReserve={() => {}} onCancel={() => {}} />
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

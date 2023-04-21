@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RocketList component renders correctly when rocket is reserved 1`] = `
+<section
+  className="main"
+/>
+`;

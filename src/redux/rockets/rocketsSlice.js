@@ -15,50 +15,47 @@ const rocketSlice = createSlice({
   name: 'rockets',
   initialState: {
     rockets: [],
-    isFetching: false,
-    status: 'idle',
     error: null,
+    status: 'idle',
   },
   reducers: {
     reserverockets: (state, action) => {
       const id = action.payload;
-      const reservedRockets = state.rockets.map((rockets) => {
-        if (rockets.id === id) {
-          return { ...rockets, reserved: true };
+      const reservedRockets = state.rockets.map((rocket) => {
+        if (rocket.id === id) {
+          return { ...rocket, reserved: true };
         }
-        return rockets;
+        return rocket;
       });
-      return { ...state, rockets: reservedRockets };
+      state.rockets = reservedRockets;
     },
     cancelrockets: (state, action) => {
       const id = action.payload;
-      const rockets = state.rockets.map((rockets) => {
-        if (rockets.id !== id) return rockets;
-        return { ...rockets, reserved: false };
+      const rockets = state.rockets.map((rocket) => {
+        if (rocket.id === id) {
+          return { ...rocket, reserved: false };
+        }
+        return rocket;
       });
-      return { ...state, rockets };
+      state.rockets = rockets;
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchRockets.pending, (state) => ({
-        ...state,
-        status: 'loading',
-        isFetching: true,
-      }))
-      .addCase(fetchRockets.rejected, (state, action) => ({
-        ...state,
-        status: 'failed',
-        error: action.error.message,
-      }))
-      .addCase(fetchRockets.fulfilled, (state, action) => ({
-        ...state,
-        isFetching: false,
-        rockets: action.payload,
-      }));
+      .addCase(fetchRockets.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.rockets = action.payload;
+      })
+      .addCase(fetchRockets.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      });
   },
 });
 
-export default rocketSlice.reducer;
 export const { reserverockets, cancelrockets } = rocketSlice.actions;
-export const selectRockets = (state) => state.rockets.rockets;
+
+export default rocketSlice.reducer;
