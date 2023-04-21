@@ -1,0 +1,191 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header {
+  list-style: none;
+  padding: 0 2rem;
+}
+
+.headerimg {
+  width: 60px;
+  height: 60px;
+}
+
+.links > li {
+  list-style-type: none;
+}
+
+.links > li > a {
+  color: #0290ff;
+  list-style: none;
+  text-decoration: none;
+}
+
+.links > li:nth-child(2)::after {
+  content: '|';
+  float: right;
+  width: 1px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.links li a:hover,
+.links li a.active {
+  color: #0290ff;
+  text-decoration: underline;
+}
+
+.hr {
+  border: 0.1px solid lightgray;
+}
+
+.main {
+  background-color: white !important;
+}
+
+.main > div {
+  margin-top: 15px;
+}
+
+.Rocket_container {
+  padding: 0 3.5rem;
+}
+
+.Rocket_container > div {
+  height: 250px;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.rocket_img > img {
+  width: 250px;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  background-color: #26a69a;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-right: 6px;
+  padding: 0.1rem;
+}
+
+.rocket_head {
+  margin-top: -0.1%;
+  color: #383e4a;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.rocket_text {
+  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(62, 62, 62);
+}
+
+.cancel-btn,
+.reserve-Btn {
+  background-color: #0290ff;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel-btn:hover,
+.reserve-Btn:hover {
+  background-color: #3ea4f1;
+}
+
+.myprofile_container {
+  justify-content: space-around;
+  display: flex;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+
+.myprofile_container > div {
+  width: 50%;
+}
+
+.rockettable {
+  width: 100%;
+}
+
+.rocketbody > tr > td {
+  border: 2px solid rgb(234, 231, 231);
+  color: rgb(64, 62, 62);
+  padding: 15px 10px 15px 10px;
+}
+
+.mission-section {
+  width: 100%;
+}
+
+.mission-list {
+  border-radius: 2px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.listItem {
+  border: 2px solid #e1e4e8;
+  color: #212529;
+  padding: 12px 12px 20px;
+  width: 90%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
